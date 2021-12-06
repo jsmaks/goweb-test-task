@@ -7,11 +7,7 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-size: cover;
-  background-repeat: no-repeat;
-
   &__container {
     @extend %flex-center;
     flex-direction: column;
