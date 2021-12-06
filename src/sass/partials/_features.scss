@@ -1,0 +1,75 @@
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+.features {
+  &__container {
+    padding: 30px 20px;
+  }
+  &__item {
+    @extend %flex-center;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+  &__title {
+    @include font(18px, 30px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+    color: $primary-text-color;
+  }
+  &__text {
+    max-width: 230px;
+  }
+}
+.svg__container {
+  @extend %flex-center;
+  width: 64px;
+  height: 64px;
+  background: $accent-color;
+  border-radius: 50%;
+  margin-bottom: 11px;
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 768px) {
+  .features {
+    &__container {
+      padding: 40px 0 47px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-row-gap: 0px;
+    }
+    &__title {
+      @include font(20px, 33px);
+      margin-bottom: 16px;
+    }
+    &__text {
+      @include font(18px, 28px);
+      margin-bottom: 16px;
+    }
+    &__item {
+      margin-bottom: 0px;
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .svg__container {
+    width: 67px;
+    height: 67px;
+    margin-bottom: 15px;
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 1360px) {
+  .features {
+    &__container {
+      padding-bottom: 19px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../images/home/showcase.jpg');
+
+  &__container {
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 144px 0 95px;
+  }
+  &__title,
+  &__subtitle {
+    color: $hero-text-color;
+  }
+
+  &__button {
+    @include font(16px, 26px);
+    background-color: $accent-color;
+    color: $secondary-text-color;
+
+    &-icon {
+      width: 7.26px;
+      height: 11.25px;
+      fill: $secondary-text-color;
+      margin-right: 5.87px;
+    }
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 768px) {
+  .hero {
+    &__container {
+      padding: 407px 0 412px;
+    }
+    &__title {
+      @include font(55px, 66px);
+      margin-bottom: 25px;
+    }
+
+    &__subtitle {
+      margin-bottom: 29px;
+    }
+
+    &__button {
+      width: 165px;
+      height: 48px;
+      @include font(18px, 28px);
+    }
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 1360px) {
+  .hero {
+    &__container {
+      padding: 279px 0 284px;
+    }
+
+    &__button {
+      transition: all 0.3s linear;
+      &:focus,
+      &:hover {
+        filter: opacity(0.8);
+      }
+    }
+  }
+}

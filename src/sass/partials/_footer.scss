@@ -1,0 +1,53 @@
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+.footer {
+  background-color: $footer-color;
+  &__container {
+    padding: 20px 0;
+  }
+  &__text {
+    text-align: center;
+    color: $secondary-text-color;
+  }
+}
+.social {
+  &__list {
+    @extend %flex-center;
+    margin-bottom: 10px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__icon{
+    fill: white;
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 768px) {
+  .footer {
+    &__container {
+      padding-bottom: 16px;
+    }
+    &__text {
+      @include font(18px, 28px);
+    }
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 1360px) {
+  .social {
+    &__icon {
+      transition: all 0.3s linear;
+      &:hover, :focus{
+        fill: $accent-color;
+      }
+    }
+  }
+}

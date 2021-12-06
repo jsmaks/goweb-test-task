@@ -1,0 +1,85 @@
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+.contact {
+  background: $contact-color;
+  &__image {
+    margin: 0 -20px;
+  }
+
+  &__wrapper {
+    padding: 26px 30px 30px;
+  }
+  &__title {
+    @include font(38px, 48px);
+    font-weight: 300;
+    margin-bottom: 34px;
+    text-align: left;
+    color: $primary-text-color;
+  }
+  &__form {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+  &__form-input {
+    width: 260px;
+    height: 40px;
+    background: $input-color;
+    border: none;
+    padding-left: 5px;
+    width: 100%;
+
+    &:nth-child(2) {
+      margin: 36px 0 53px;
+    }
+  }
+  &__form-button {
+    @include font(16px, 22px);
+    background-color: $accent-color;
+    color: $secondary-text-color;
+    width: 100%;
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 768px) {
+  .contact {
+    &__container {
+      background: $contact-color;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__form-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__image {
+      margin: 0px;
+    }
+  }
+}
+//----------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------//
+@media screen and (min-width: 1360px) {
+  .contact {
+    &__wrapper {
+      padding-left: 30px;
+      padding-top: 78px;
+      padding-bottom: 82px;
+    }
+
+    &__form-image {
+      width: 680px;
+    }
+    &__form-button {
+      transition: all 0.3s linear;
+      &:focus,
+      &:hover {
+        filter: opacity(0.8);
+      }
+    }
+  }
+}

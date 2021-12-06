@@ -1,0 +1,27 @@
+<section class="contact" id="contact">
+    <div class="contact__container container">
+    <div class="contact__image">
+        <picture class="contact__photo">
+            <source srcset="./images/home/contact.webp 1x, ./images/home/contact@2x.webp 2x" media="(min-width:320px)"
+                type="image/webp">
+            <source srcset="./images/home/contact.jpg 1x, ./images/home/contact@2x.jpg 2x">
+            <img class="contact__form-image"  src="./images/home/contact.jpg" alt="image contact">
+        </picture>
+    </div>
+    <div class="contact__wrapper">
+        <h2 class="contact__title title">Request Callback</h2>
+        <form class="contact__form" action="#">
+            <input class="contact__form-input" name="callback-name" type="text" placeholder="Enter your name" />
+            <input class="contact__form-input" id="inputEmail" name="callback-email" type="email" placeholder="Enter email*" required />
+            <button class="contact__form-button btn" type="submit" >Send</button>
+        </form>
+    </div>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <h1 class="modal__title">Thank you!</h1>
+            <p class="modal__text text">Your form submission has been received.</p>
+            <button class="modal__button btn" data-modal-close>← Back to our site</button>
+        </div>
+    </div>
+</div>
+</section>

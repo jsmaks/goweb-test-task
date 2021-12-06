@@ -1,0 +1,68 @@
+@import '../variables/colors';
+@import '../variables/mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute !important;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.title {
+  @include font(52px, 66px);
+  font-weight: 300;
+  text-align: center;
+  
+  color: $secondary-text-color;
+  margin-bottom: 16px;
+
+}
+.subtitle {
+  @include font(22px, 37px);
+  text-align: center;
+  color: $hero-text-color;
+  margin-bottom: 27px;
+}
+.text {
+  @include font(16px, 26px);
+  text-align: center;
+
+  color: $primary-text-color;
+}
+.btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  width: 158px;
+  height: 47px;
+}
